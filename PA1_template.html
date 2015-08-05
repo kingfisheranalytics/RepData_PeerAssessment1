@@ -289,9 +289,9 @@ activity.cleaned$daytype &lt;- &quot;weekday&quot;
 activity.cleaned$daytype[activity.cleaned$dayofweek==&quot;Saturday&quot; | activity.cleaned$dayofweek==&quot;Sunday&quot;] &lt;- &quot;weekend&quot;
 
 #Make sure it's converted to a factor.
-activity.cleaned$daytype &lt;-factor(activity.cleaned$daytype)
-
-#Now, let's plot out the line charts by weekday and weekend.  we'll use the same general method we used for Step 3, except that we'll iterate (and aggregate) separately for weekdays and weekends.
+activity.cleaned$daytype &lt;-factor(activity.cleaned$daytype)</code></pre>
+<p><strong>Results</strong>: Generate line charts for weekday days and weekend dates.</p>
+<pre class="r"><code>#Now, let's plot out the line charts by weekday and weekend.  we'll use the same general method we used for Step 3, except that we'll iterate (and aggregate) separately for weekdays and weekends.
 par(mfrow = c(2, 1))
 layout(matrix(c(1,1)), heights=c(2,2))
 for (chart.daytype in c(&quot;weekend&quot;, &quot;weekday&quot;)) {

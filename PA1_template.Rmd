@@ -222,7 +222,11 @@ activity.cleaned$daytype[activity.cleaned$dayofweek=="Saturday" | activity.clean
 
 #Make sure it's converted to a factor.
 activity.cleaned$daytype <-factor(activity.cleaned$daytype)
+```
 
+**Results**: Generate line charts for weekday days and weekend dates.
+  
+```{r, echo=TRUE}
 #Now, let's plot out the line charts by weekday and weekend.  we'll use the same general method we used for Step 3, except that we'll iterate (and aggregate) separately for weekdays and weekends.
 par(mfrow = c(2, 1))
 layout(matrix(c(1,1)), heights=c(2,2))
